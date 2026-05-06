@@ -3,7 +3,7 @@ script_author("You")
 
 local version = "1.0"
 local version_url = "https://example.com/version.txt"
-local script_url = "https://example.com/script.lua"
+local script_url = "https://raw.githubusercontent.com/gullsssss/FunHelper/main/FunHelper.lua"
 local script_path = thisScript().path
 
 function main()
