@@ -2,7 +2,7 @@ script_name("AutoUpdate Example")
 script_author("You")
 
 local version = "1.0"
-local version_url = "https://example.com/version.txt"
+local version_url = "https://raw.githubusercontent.com/gullsssss/FunHelper/main/VERSION.txt"
 local script_url = "https://raw.githubusercontent.com/gullsssss/FunHelper/main/FunHelper.lua"
 local script_path = thisScript().path
 
@@ -12,10 +12,10 @@ function main()
 
     sampAddChatMessage("[Updater] Проверка обновлений...", -1)
 
-    downloadUrlToFile(version_url, getWorkingDirectory() .. "\\version.txt",
+    downloadUrlToFile(version_url, getWorkingDirectory() .. "\\VERSION.txt",
         function(id, status)
             if status == dlstatus.STATUS_ENDDOWNLOADDATA then
-                local file = io.open(getWorkingDirectory() .. "\\version.txt", "r")
+                local file = io.open(getWorkingDirectory() .. "\\VERSION.txt", "r")
                 if file then
                     local new_version = file:read("*a")
                     file:close()
